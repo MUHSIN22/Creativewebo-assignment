@@ -1,0 +1,36 @@
+.hero{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 5000px 0 16px rgba(101,77,61,.67);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .hero-title{
+        font-size: 3rem;
+        color: #fff;
+    }
+
+    .btn-wrapper{
+        margin-top: 2rem;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .hero{
+        padding: 1rem;
+        .hero-title{
+            font-size: 2.5rem;
+        }
+    }
+}
+@media only screen and (max-width:500px) {
+    .hero{
+        padding: 0.5rem;
+        .hero-title{
+            font-size: 1.2rem;
+        }
+    }
+}

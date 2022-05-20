@@ -1,0 +1,67 @@
+@import '/src/variables';
+
+.news-section{
+    background: #000;
+    color: #fff;
+    .news-wrapper{
+        padding: 0 5%;
+    }
+    .heading{
+        text-align: center;
+        font-size: 2.5rem;
+        color: $golden;
+        margin-bottom: 1rem;
+    }
+    .sub-description{
+        width: 100%;
+        font-family: $roboto;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 30px;
+    }
+    .description-italic{
+        font-style: italic;
+    }
+    .news-cards-wrapper{
+        margin-top: 5rem;
+        display: grid;
+        grid-template-areas: "news1 news1 news2 news2 news3 news3"
+                             "news4 news4 news5 news5 news3 news3"
+                             "news6 news6 news6 news7 news7 news7";
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: calc(100vw / 7) calc(100vw / 7) calc(100vw / 5);
+        grid-gap: 1rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .news-section{
+        .heading{
+            margin-top: 2rem;
+            font-size: 2rem;
+        }
+        .sub-description{
+            font-size: 1rem;
+        }
+        .news-cards-wrapper{
+            grid-template-areas: "news1""news2""news3""news4""news5""news6""news7";
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(7,calc(100vw / 3));
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .news-section{
+        .heading{
+            margin-top: 2rem;
+            font-size: 1.5rem;
+        }
+        .sub-description{
+            font-size: 0.9rem;
+        }
+        .news-cards-wrapper{
+            margin-top: 2rem;
+            grid-template-rows: repeat(7,calc(100vw / 2));
+        }
+    }
+}
